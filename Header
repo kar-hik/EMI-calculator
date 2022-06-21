@@ -1,12 +1,11 @@
 import os
-import urllib.request
-#%%
+
 urllib.request.urlretrieve('https://gist.githubusercontent.com/aakashns/257f6e6c8719c17d0e498ea287d1a386/raw/7def9ef4234ddf0bc82f855ad67dac8b971852ef/loans1.txt','./data/loan1.txt')
-#%%
+
 with open(r'./data/loan1.txt','r') as f1:
     f1_content = f1.readlines()
     for i in range(len(f1_content)):
         print(f1_content[i].strip())
-#%%
+
 def parse_header(header_line):
     return header_line.strip().split(',')
