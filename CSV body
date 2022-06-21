@@ -1,0 +1,8 @@
+def parse_value(data_lines):
+    value = []
+    for i in data_lines.strip().split(','):
+        if i == '':
+            value.append(0.0)
+        else:
+            value.append(float(i))
+    return value
