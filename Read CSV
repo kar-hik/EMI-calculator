@@ -1,4 +1,4 @@
-def read_csv(path):
+def read_csv(path):    # Takes input as link and stores the files automatically and reads it.
     urllib.request.urlretrieve(path,'./data/my_fre_ans_f1')
     list_dic = []
     with open('./data/my_fre_ans_f1','r') as f1:
@@ -8,3 +8,15 @@ def read_csv(path):
             values = parse_value(j)
             list_dic.append(create_item_dict(header,values))
     return list_dic
+pritn(read_csv('https://gist.githubusercontent.com/aakashns/257f6e6c8719c17d0e498ea287d1a386/raw/7def9ef4234ddf0bc82f855ad67dac8b971852ef/loans1.txt'))
+
+output:
+[{'amount': 100000.0, 'duration': 36.0, 'rate': 0.08, 'down_payment': 20000.0},
+ {'amount': 200000.0, 'duration': 12.0, 'rate': 0.1, 'down_payment': 0.0},
+ {'amount': 628400.0, 'duration': 120.0, 'rate': 0.12,'down_payment': 100000.0},
+ {'amount': 4637400.0, 'duration': 240.0, 'rate': 0.06, 'down_payment': 0.0},
+ {'amount': 42900.0, 'duration': 90.0, 'rate': 0.07, 'down_payment': 8900.0},
+ {'amount': 916000.0, 'duration': 16.0, 'rate': 0.13, 'down_payment': 0.0},
+ {'amount': 45230.0, 'duration': 48.0, 'rate': 0.08, 'down_payment': 4300.0},
+ {'amount': 991360.0, 'duration': 99.0, 'rate': 0.08, 'down_payment': 0.0},
+ {'amount': 423000.0, 'duration': 27.0, 'rate': 0.09, 'down_payment': 47200.0}]
