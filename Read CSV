@@ -1,0 +1,10 @@
+def read_csv(path):
+    urllib.request.urlretrieve(path,'./data/my_fre_ans_f1')
+    list_dic = []
+    with open('./data/my_fre_ans_f1','r') as f1:
+        lines = f1.readlines()
+        header = parse_header(lines[0])
+        for j in lines[1:]:
+            values = parse_value(j)
+            list_dic.append(create_item_dict(header,values))
+    return list_dic
